@@ -6,10 +6,6 @@
 @attribute mfcc_sma[1]_maxPos numeric
 @attribute mfcc_sma[1]_minPos numeric
 @attribute mfcc_sma[1]_amean numeric
-@attribute mfcc_sma[1]_linregc1 numeric
-@attribute mfcc_sma[1]_linregc2 numeric
-@attribute mfcc_sma[1]_linregerrA numeric
-@attribute mfcc_sma[1]_linregerrQ numeric
 @attribute mfcc_sma[1]_stddev numeric
 @attribute mfcc_sma[1]_skewness numeric
 @attribute mfcc_sma[1]_kurtosis numeric
@@ -25,10 +21,6 @@
 @attribute mfcc_sma[2]_maxPos numeric
 @attribute mfcc_sma[2]_minPos numeric
 @attribute mfcc_sma[2]_amean numeric
-@attribute mfcc_sma[2]_linregc1 numeric
-@attribute mfcc_sma[2]_linregc2 numeric
-@attribute mfcc_sma[2]_linregerrA numeric
-@attribute mfcc_sma[2]_linregerrQ numeric
 @attribute mfcc_sma[2]_stddev numeric
 @attribute mfcc_sma[2]_skewness numeric
 @attribute mfcc_sma[2]_kurtosis numeric
@@ -44,10 +36,6 @@
 @attribute mfcc_sma[3]_maxPos numeric
 @attribute mfcc_sma[3]_minPos numeric
 @attribute mfcc_sma[3]_amean numeric
-@attribute mfcc_sma[3]_linregc1 numeric
-@attribute mfcc_sma[3]_linregc2 numeric
-@attribute mfcc_sma[3]_linregerrA numeric
-@attribute mfcc_sma[3]_linregerrQ numeric
 @attribute mfcc_sma[3]_stddev numeric
 @attribute mfcc_sma[3]_skewness numeric
 @attribute mfcc_sma[3]_kurtosis numeric
@@ -63,10 +51,6 @@
 @attribute mfcc_sma[4]_maxPos numeric
 @attribute mfcc_sma[4]_minPos numeric
 @attribute mfcc_sma[4]_amean numeric
-@attribute mfcc_sma[4]_linregc1 numeric
-@attribute mfcc_sma[4]_linregc2 numeric
-@attribute mfcc_sma[4]_linregerrA numeric
-@attribute mfcc_sma[4]_linregerrQ numeric
 @attribute mfcc_sma[4]_stddev numeric
 @attribute mfcc_sma[4]_skewness numeric
 @attribute mfcc_sma[4]_kurtosis numeric
@@ -82,10 +66,6 @@
 @attribute mfcc_sma[5]_maxPos numeric
 @attribute mfcc_sma[5]_minPos numeric
 @attribute mfcc_sma[5]_amean numeric
-@attribute mfcc_sma[5]_linregc1 numeric
-@attribute mfcc_sma[5]_linregc2 numeric
-@attribute mfcc_sma[5]_linregerrA numeric
-@attribute mfcc_sma[5]_linregerrQ numeric
 @attribute mfcc_sma[5]_stddev numeric
 @attribute mfcc_sma[5]_skewness numeric
 @attribute mfcc_sma[5]_kurtosis numeric
@@ -101,10 +81,6 @@
 @attribute mfcc_sma[6]_maxPos numeric
 @attribute mfcc_sma[6]_minPos numeric
 @attribute mfcc_sma[6]_amean numeric
-@attribute mfcc_sma[6]_linregc1 numeric
-@attribute mfcc_sma[6]_linregc2 numeric
-@attribute mfcc_sma[6]_linregerrA numeric
-@attribute mfcc_sma[6]_linregerrQ numeric
 @attribute mfcc_sma[6]_stddev numeric
 @attribute mfcc_sma[6]_skewness numeric
 @attribute mfcc_sma[6]_kurtosis numeric
@@ -120,10 +96,6 @@
 @attribute mfcc_sma[7]_maxPos numeric
 @attribute mfcc_sma[7]_minPos numeric
 @attribute mfcc_sma[7]_amean numeric
-@attribute mfcc_sma[7]_linregc1 numeric
-@attribute mfcc_sma[7]_linregc2 numeric
-@attribute mfcc_sma[7]_linregerrA numeric
-@attribute mfcc_sma[7]_linregerrQ numeric
 @attribute mfcc_sma[7]_stddev numeric
 @attribute mfcc_sma[7]_skewness numeric
 @attribute mfcc_sma[7]_kurtosis numeric
@@ -139,10 +111,6 @@
 @attribute mfcc_sma[8]_maxPos numeric
 @attribute mfcc_sma[8]_minPos numeric
 @attribute mfcc_sma[8]_amean numeric
-@attribute mfcc_sma[8]_linregc1 numeric
-@attribute mfcc_sma[8]_linregc2 numeric
-@attribute mfcc_sma[8]_linregerrA numeric
-@attribute mfcc_sma[8]_linregerrQ numeric
 @attribute mfcc_sma[8]_stddev numeric
 @attribute mfcc_sma[8]_skewness numeric
 @attribute mfcc_sma[8]_kurtosis numeric
@@ -158,10 +126,6 @@
 @attribute mfcc_sma[9]_maxPos numeric
 @attribute mfcc_sma[9]_minPos numeric
 @attribute mfcc_sma[9]_amean numeric
-@attribute mfcc_sma[9]_linregc1 numeric
-@attribute mfcc_sma[9]_linregc2 numeric
-@attribute mfcc_sma[9]_linregerrA numeric
-@attribute mfcc_sma[9]_linregerrQ numeric
 @attribute mfcc_sma[9]_stddev numeric
 @attribute mfcc_sma[9]_skewness numeric
 @attribute mfcc_sma[9]_kurtosis numeric
@@ -177,10 +141,6 @@
 @attribute mfcc_sma[10]_maxPos numeric
 @attribute mfcc_sma[10]_minPos numeric
 @attribute mfcc_sma[10]_amean numeric
-@attribute mfcc_sma[10]_linregc1 numeric
-@attribute mfcc_sma[10]_linregc2 numeric
-@attribute mfcc_sma[10]_linregerrA numeric
-@attribute mfcc_sma[10]_linregerrQ numeric
 @attribute mfcc_sma[10]_stddev numeric
 @attribute mfcc_sma[10]_skewness numeric
 @attribute mfcc_sma[10]_kurtosis numeric
@@ -196,10 +156,6 @@
 @attribute mfcc_sma[11]_maxPos numeric
 @attribute mfcc_sma[11]_minPos numeric
 @attribute mfcc_sma[11]_amean numeric
-@attribute mfcc_sma[11]_linregc1 numeric
-@attribute mfcc_sma[11]_linregc2 numeric
-@attribute mfcc_sma[11]_linregerrA numeric
-@attribute mfcc_sma[11]_linregerrQ numeric
 @attribute mfcc_sma[11]_stddev numeric
 @attribute mfcc_sma[11]_skewness numeric
 @attribute mfcc_sma[11]_kurtosis numeric
@@ -215,10 +171,6 @@
 @attribute mfcc_sma[12]_maxPos numeric
 @attribute mfcc_sma[12]_minPos numeric
 @attribute mfcc_sma[12]_amean numeric
-@attribute mfcc_sma[12]_linregc1 numeric
-@attribute mfcc_sma[12]_linregc2 numeric
-@attribute mfcc_sma[12]_linregerrA numeric
-@attribute mfcc_sma[12]_linregerrQ numeric
 @attribute mfcc_sma[12]_stddev numeric
 @attribute mfcc_sma[12]_skewness numeric
 @attribute mfcc_sma[12]_kurtosis numeric
@@ -228,6 +180,6 @@
 @attribute mfcc_sma[12]_iqr1-2 numeric
 @attribute mfcc_sma[12]_iqr2-3 numeric
 @attribute mfcc_sma[12]_iqr1-3 numeric
-@attribute speaker numeric
+@attribute sound_class numeric
 
 @data
