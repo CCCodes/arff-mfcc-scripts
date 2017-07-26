@@ -21,9 +21,15 @@ arff_base_path = 'PycharmProjects/arff_scripts/assimilated_arff_base.txt'
 with open(arff_base_path, 'r+') as arff_base:
     out_file.write(arff_base.read())
 
+classes = ["puppy", "dog"]
+
+for c in classes[:-1]:
+    out_file.write(c + ", ")
+out_file.write(classes[-1] + "}\n\n@data\n")
+
 # mapping of speaker names/audio file convention for every speaker to speaker number
 # which becomes an attribute of an instance in arff file
-classes = {
+classes_map = {
     "puppy1.csv": "puppy",
     "puppy2.csv": "puppy",
     "puppy3.csv": "puppy",
@@ -46,7 +52,7 @@ for root, dir, files in os.walk(search_path):
         file_name_pattern = r'^anonymous-(\d+)(-...)(.*)\.csv'
         file_type = re.sub(file_name_pattern, r'\1\2', fi)
         print("file_type=%s" % file_type)
-        file_class = classes[file_type]  # classify by nominal rather than numeric?
+        file_class = classes_map[file_type]  # classify by nominal rather than numeric?
         text = f.read()
         # data = text[text.index("\n"):]
 

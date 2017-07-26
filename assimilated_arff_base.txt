@@ -180,6 +180,4 @@
 @attribute mfcc_sma[12]_iqr1-2 numeric
 @attribute mfcc_sma[12]_iqr2-3 numeric
 @attribute mfcc_sma[12]_iqr1-3 numeric
-@attribute sound_class numeric
-
-@data
+@attribute sound_class {
