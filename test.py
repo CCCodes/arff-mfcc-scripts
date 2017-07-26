@@ -1,11 +1,9 @@
 import sys
 import os
-import glob
 import re
 
 sys.path.append('/home/caitlinchou/opensmile-2.3.0/config/')
 search_path = 'sound_samples/dog_barks'
-# os.chdir(search_path)
 print(os.getcwd())
 i = 0
 list_of_files = []
@@ -16,11 +14,13 @@ for root, dir, files in os.walk('sound_samples/dog_barks'):
             list_of_files.append(root + '/' + f)
 
 print("# Files: %d" % len(list_of_files))
-os.chdir('/home/caitlinchou/Documents/')
+# os.chdir('/home/caitlinchou/PycharmProject/')
 
-create_dir = '/home/caitlinchou/Documents/csv_samples/'
+create_dir = '/home/caitlinchou/PycharmProjects/arff_scripts/csv_samples/'
 if os.path.exists(create_dir) != 1:
     os.mkdir(create_dir)
+
+#os.system('PATH=$PATH:$HOME/opensmile-2.3.0/bin/linux_x64_standalone_static/')
 
 print(os.getcwd())
 for i in list_of_files:
@@ -28,5 +28,5 @@ for i in list_of_files:
     name1 = re.sub(r'/', '', name1)
     print("i=%s" % i)
     print("name1=%s" % name1)
-    os.system(
-        'SMILExtract -C ../opensmile-2.3.0/config/MFCC12_0_D_A.conf -I ' + i + ' -csvoutput ' + create_dir + '/' + name1 + '.csv')
+    os.system('SMILExtract -C ~/opensmile-2.3.0/config/MFCC12_0_D_A.conf -I '
+              + i + ' -csvoutput ' + create_dir + '/' + name1 + '.csv')

@@ -13,7 +13,7 @@ arff_path = 'PycharmProjects/arff_scripts/arff_results/end_result.arff'
 out_file = open(arff_path, 'w+')
 
 # dir in which we have mfcc's of all audio files
-search_path = 'PycharmProjects/arff_scripts/arff_samples/'
+search_path = 'PycharmProjects/arff_scripts/csv_samples/'
 # os.chdir(search_path)
 
 arff_base_path = 'PycharmProjects/arff_scripts/assimilated_arff_base.txt'
@@ -23,28 +23,40 @@ with open(arff_base_path, 'r+') as arff_base:
 
 # mapping of speaker names/audio file convention for every speaker to speaker number
 # which becomes an attribute of an instance in arff file
-speakers = {"puppy.arff": 1, "german-shephard-daniel_simon.arff": 2, "doberman-pincher_daniel-simion.arff": 3,
-            "small-dog-barking_daniel-simion.arff": 4}
+classes = {
+    "puppy1.csv": "puppy",
+    "puppy2.csv": "puppy",
+    "puppy3.csv": "puppy",
+    "puppy4.csv": "puppy",
+    "puppy5.csv": "puppy",
+    "puppy6.csv": "puppy",
+    "puppy7.csv": "puppy",
+    "puppy8.csv": "puppy",
+    "puppy9.csv": "puppy",
+    "german-shephard-daniel_simon.csv": "dog",
+    "doberman-pincher_daniel-simion.csv": "dog",
+    "small-dog-barking_daniel-simion.csv": "dog"
+}
 
 
 for root, dir, files in os.walk(search_path):
 
     for fi in files:
         f = open(root + '/' + fi, 'r')
-        file_name_pattern = r'^anonymous-(\d+)(-...)(.*)\.arff'
+        file_name_pattern = r'^anonymous-(\d+)(-...)(.*)\.csv'
         file_type = re.sub(file_name_pattern, r'\1\2', fi)
         print("file_type=%s" % file_type)
-        speaker_no = speakers[file_type]  # classify by nominal rather than numeric?
+        file_class = classes[file_type]  # classify by nominal rather than numeric?
         text = f.read()
-        data = text[text.index("@data") + 6:]  # 6 characters in @data\n
+        # data = text[text.index("\n"):]
 
-        all_data = data.split('\n')
+        all_data = text.split("\n")[1:-1]
         data_list = []
 
         for line in all_data:
-            data_list.append([float(n) for n in line.split(',')[3:]])  # ignore first three elements
+            data_list.append([float(n) for n in line.split(';')[3:]])  # ignore first three elements
 
-        frame_times = [float(line.split(',')[1]) for line in all_data if len(line) > 2]
+        frame_times = [float(line.split(';')[1]) for line in all_data if len(line) > 2]
 
         for i in range(12):
             mfcc = [n[i] for n in data_list if len(n) != 0]
@@ -70,7 +82,7 @@ for root, dir, files in os.walk(search_path):
 
             out_file.write(",".join([str(i[1]) for i in mfcc_data.items()])+",")
 
-        out_file.write(str(speaker_no)+"\n")
+        out_file.write(str(file_class) + "\n")
 
         f.close()
 
