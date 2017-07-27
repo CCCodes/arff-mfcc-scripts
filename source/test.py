@@ -2,8 +2,12 @@ import sys
 import os
 import re
 
+class_name = 'small'
+
 sys.path.append('/home/caitlinchou/opensmile-2.3.0/config/')
-search_path = 'sound_samples/dog_barks'
+search_path = 'sound_samples/dog_barks/%s_split' % class_name
+regex = r'(%s/)(.*)(\.wav)' % search_path
+
 print(os.getcwd())
 i = 0
 list_of_files = []
@@ -16,12 +20,12 @@ for root, dir, files in os.walk(search_path):
 print("# Files: %d" % len(list_of_files))
 # os.chdir('/home/caitlinchou/PycharmProject/')
 
-create_dir = '/home/caitlinchou/PycharmProjects/arff_scripts/csv_samples/'
+create_dir = '/home/caitlinchou/PycharmProjects/arff_scripts/csv_samples/%s/' % class_name
 if os.path.exists(create_dir) != 1:
     os.mkdir(create_dir)
 
 for i in list_of_files:
-    name1 = re.sub(r'(sound_samples/dog_barks/)(.*)(\.wav)', r'\2', i)
+    name1 = re.sub(regex, r'\2', i)
     name1 = re.sub(r'/', '', name1)
     print("i=%s" % i)
     print("name1=%s" % name1)
