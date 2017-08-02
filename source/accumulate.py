@@ -13,20 +13,13 @@ arff_path = 'PycharmProjects/arff_scripts/arff_results/end_result2.arff'
 out_file = open(arff_path, 'w+')
 
 # dir in which we have mfcc's of all audio files
-search_path = 'PycharmProjects/arff_scripts/csv_samples/'
+search_path = 'PycharmProjects/arff_scripts/csv_samples/bark_honk/'
 # os.chdir(search_path)
 
 arff_base_path = 'PycharmProjects/arff_scripts/assimilated_arff_base.txt'
 
 with open(arff_base_path, 'r+') as arff_base:
     out_file.write(arff_base.read())
-
-# mapping of speaker names/audio file convention for every speaker to speaker number
-# which becomes an attribute of an instance in arff file
-classes_map = {
-    "german-shephard-daniel_simon.csv": "dog",
-    "small-dog-barking_daniel-simion.csv": "dog"
-}
 
 # mfcc_0 = {}
 

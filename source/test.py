@@ -2,13 +2,12 @@ import sys
 import os
 import re
 
-class_name = 'small'
+class_name = 'honk'
 
 sys.path.append('/home/caitlinchou/opensmile-2.3.0/config/')
-search_path = 'sound_samples/dog_barks/%s_split' % class_name
+search_path = 'sound_samples/bark_honk/%s_split' % class_name
 regex = r'(%s/)(.*)(\.wav)' % search_path
 
-print(os.getcwd())
 i = 0
 list_of_files = []
 for root, dir, files in os.walk(search_path):
