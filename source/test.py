@@ -23,10 +23,14 @@ create_dir = '/home/caitlinchou/PycharmProjects/arff_scripts/csv_samples/%s/' % 
 if os.path.exists(create_dir) != 1:
     os.mkdir(create_dir)
 
-for i in list_of_files:
-    name1 = re.sub(regex, r'\2', i)
-    name1 = re.sub(r'/', '', name1)
-    print("i=%s" % i)
-    print("name1=%s" % name1)
-    os.system('SMILExtract -C ~/opensmile-2.3.0/config/MFCC12_0_D_A.conf -I '
-              + i + ' -csvoutput ' + create_dir + '/' + name1 + '.csv')
+# for i in list_of_files:
+#     name1 = re.sub(regex, r'\2', i)
+#     name1 = re.sub(r'/', '', name1)
+#     print("i=%s" % i)
+#     print("name1=%s" % name1)
+#     os.system('SMILExtract -C ~/opensmile-2.3.0/config/MFCC12_0_D_A.conf -I '
+#               + i + ' -csvoutput ' + create_dir + '/' + name1 + '.csv')
+
+
+os.system('SMILExtract -C ~/opensmile-2.3.0/config/MFCC12_0_D_A.conf -I ' + 'sound_samples/click.wav' + ' -csvoutput ' +
+          '/home/caitlinchou/PycharmProjects/arff_scripts/csv_samples/click.csv')

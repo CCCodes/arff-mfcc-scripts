@@ -9,7 +9,7 @@ os.chdir(os.getenv("HOME"))
 print(os.getcwd())
 
 # path of output arff file = arff_path
-arff_path = 'PycharmProjects/arff_scripts/arff_results/end_result2.arff'
+arff_path = 'PycharmProjects/arff_scripts/arff_results/end_result3.arff'
 out_file = open(arff_path, 'w+')
 
 # dir in which we have mfcc's of all audio files
@@ -47,7 +47,10 @@ for subdir in subdirs:
             data_list = []
 
             for line in all_data:
-                data_list.append([float(n) for n in line.split(';')[3:]])  # ignore first three elements
+                mfcc_set = [float(n) for n in line.split(';')[3:]]  # ignore first three elements
+                if all(item == 0 for item in mfcc_set):
+                    continue  # ignore b/c this window is silent
+                data_list.append(mfcc_set)
 
             frame_times = [float(line.split(';')[1]) for line in all_data if len(line) > 2]
 
